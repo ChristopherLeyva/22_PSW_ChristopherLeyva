@@ -54,7 +54,21 @@ BUILD FAILURE
 
 La prueba fallida no estaba mal escrita: estaba alertando correctamente sobre el defecto en el código (principio: "las pruebas demuestran la presencia de defectos").
 
-### Entregable
+## Actividad: Método de Descuentos
+
+Clase probada: `src/main/java/com/lucas/testing/Descuentos.java`
+Método probado: `calcularPrecioFinal(precio, descuento)`.
+Pruebas: `src/test/java/com/lucas/testing/DescuentosTest.java` (7 casos).
+
+| # | Precio | Descuento | Esperado | Justificación |
+|---|-------:|----------:|---------:|---------------|
+| 1 | 100 | 10% | 90 | Caso básico sugerido por la profesora. |
+| 2 | 200 | 20% | 160 | Caso sugerido por la profesora. |
+| 3 | 50 | 0% | 50 | Sin descuento: el precio no debe cambiar. |
+| 4 | 500 | 50% | 250 | Mitad de precio: caso sugerido por la profesora. |
+| 5 | 250 | 100% | 0 | **Elegido por mí:** es el límite superior del descuento; si la fórmula manejara mal el 100% (p. ej. división con enteros), el resultado no sería 0. |
+| 6 | 120.50 | 25% | 90.375 | Elegido por mí: precios reales llevan centavos; verifica exactitud con decimales (usa delta 0.001). |
+| 7 | 800 | 30% | 560 | Elegido por mí: descuento típico de ofertas sobre un monto alto; confirma exactitud en valores grandes. |
 
 Para la evidencia en Google Drive: revisar el reporte generado por surefire en
 `target/surefire-reports/` (incluye `com.lucas.testing.CalificacionesTest.txt`

@@ -3,7 +3,7 @@ package com.lucas.testing;
 public class Calificaciones {
 
     public double calcularPromedio(double nota1, double nota2, double nota3) {
-        return (nota1 + nota2 + nota3) / 3;
+        return (nota1 + nota2 + nota3) / 2;
     }
 
     public boolean estaAprobado(double promedio) {
